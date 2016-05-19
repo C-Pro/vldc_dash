@@ -1,0 +1,20 @@
+db:
+    image: memcached:1.4.25
+    hostname: db
+web_app:
+    build: web_app
+    hostname: web
+    ports:
+        - "8080:8080"
+    links:
+        - db
+    environment:
+        - MEMCACHE_SERVER=db:11211
+        - LISTEN_HOST=web
+get_tweets:
+    build: get_tweets
+    hostname: integr
+    links:
+        - db
+    environment:
+        - MEMCACHE_SERVER=db:11211

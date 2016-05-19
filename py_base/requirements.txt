@@ -1,0 +1,5 @@
+bottle==0.12.9
+future==0.15.2
+gunicorn==19.5.0
+-e git://github.com/bear/python-twitter.git@c5e37b108bd6defd315995227481c5c112219189#egg=python_twitter
+python3-memcached==1.51

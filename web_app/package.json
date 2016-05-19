@@ -1,0 +1,19 @@
+{
+  "name": "vldc-dash",
+  "version": "1.0.0",
+  "description": "Twitter tag dashboard UI for vldc docker demo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify jsx/main.jsx -v -t [ babelify --presets [ react ] ] -o ui/main.js",
+    "build": "browserify jsx/main.jsx -v -t [ babelify --presets [ react ] ] -o ui/main.js"
+  },
+  "author": "cpro",
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "watchify": "^3.7.0",
+    "whatwg-fetch": "^0.11.0"
+  }
+}
