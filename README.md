@@ -4,9 +4,10 @@ This is a project for live docker demo at http://vldc.gq event 2016.21.05
 
 It provides simple dashboard displaying 10 most recent tweets with hashtags #vldc and #vldclite.
 It runs 3 docker containers:
-# memcache - stores tweets
-# get_tweets - gets tweets with #vldc and #vldclite tags in realtime using Twitter streaming API and stores them in memcached
-# web_app - serves static (bootstrap + react) page and exposes GET /tweets JSON endpoint with 10 recent tweets
+
+1. memcache - stores tweets
+2. get_tweets - gets tweets with #vldc and #vldclite tags in realtime using Twitter streaming API and stores them in memcached
+3. web_app - serves static (bootstrap + react) page and exposes GET /tweets JSON endpoint with 10 recent tweets
 
 To build and run it you'll need:
 
