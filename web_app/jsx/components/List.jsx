@@ -5,7 +5,7 @@ var HTTP = require("../services/httpservice");
 var List = React.createClass({
     getInitialState: function() {
       return {tweets: [{"id_str":"jopa",
-                        "text": "Твитьте, с тегом #VLDCLITE, ребятушки!",
+                        "text": "Твитьте с тегом #VLDCLITE, ребятушки!",
                         "user": { "name": "VLDC Cat",
                                   "profile_image_url": "https://pbs.twimg.com/profile_images/719335232713920513/-1SchS4a_bigger.jpg"
                                 }
@@ -19,7 +19,9 @@ var List = React.createClass({
     get: function() {
       HTTP.get("/tweets").then(
         function(tweets) {
-            this.setState({tweets: tweets});
+            if(tweets) {
+                this.setState({tweets: tweets});
+            }
         }.bind(this)
       );
             
