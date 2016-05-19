@@ -1,6 +1,6 @@
 # VLDC Dash Docker demo #
 
-This is a project for live docker demo at http://vldc.gq event 2016.21.05
+This is a project for live docker demo at [VLDC](http://vldc.org) event 2016.21.05
 
 It provides simple dashboard displaying 10 most recent tweets with hashtags #vldc and #vldclite.
 It runs 3 docker containers:
